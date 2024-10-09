@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.doublepointer;
+package com.dw.algorithm.doublepointer;
 
 /**
  * <h1>爱生气的书店老板</h1>

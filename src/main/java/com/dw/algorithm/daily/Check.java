@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.daily;
+package com.dw.algorithm.daily;
 
 /**
  * <h1>检查数组是否经排序和轮转得到</h1>

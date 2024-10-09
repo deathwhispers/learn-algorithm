@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.doublepointer;
+package com.dw.algorithm.doublepointer;
 
 /**
  * <h1>分割平衡字符串</h1>

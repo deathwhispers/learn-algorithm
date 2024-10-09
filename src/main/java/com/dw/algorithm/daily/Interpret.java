@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.daily;
+package com.dw.algorithm.daily;
 
 /**
  * <b>设计 Goal 解析器</b>

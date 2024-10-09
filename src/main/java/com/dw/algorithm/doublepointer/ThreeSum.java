@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.doublepointer;
+package com.dw.algorithm.doublepointer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.daily;
+package com.dw.algorithm.daily;
 
 /**
  * <h1>最大平均值和的分组</h1>

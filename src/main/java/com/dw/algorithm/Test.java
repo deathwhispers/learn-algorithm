@@ -1,4 +1,4 @@
-package com.guangjian.algorithm;
+package com.dw.algorithm;
 
 /**
  * @author yanggj

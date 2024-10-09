@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.doublepointer;
+package com.dw.algorithm.doublepointer;
 
 /**
  * <h1>通过连接另一个数组的子数组得到一个数组</h1>

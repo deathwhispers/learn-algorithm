@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.doublepointer;
+package com.dw.algorithm.doublepointer;
 
 /**
  * <h1>盛最多水的容器</h1>

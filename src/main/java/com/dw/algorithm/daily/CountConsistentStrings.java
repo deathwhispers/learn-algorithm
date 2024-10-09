@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.daily;
+package com.dw.algorithm.daily;
 
 /**
  * <b>统计一致字符串的数目</b>

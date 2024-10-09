@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.daily;
+package com.dw.algorithm.daily;
 
 /**
  * <b>使序列递增的最小交换次数</b>

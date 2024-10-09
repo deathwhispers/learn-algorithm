@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.linkedlist;
+package com.dw.algorithm.linkedlist;
 
 /**
  * <h1> K 个一组翻转链表</h1>

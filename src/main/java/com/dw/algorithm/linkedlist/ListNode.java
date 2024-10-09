@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.linkedlist;
+package com.dw.algorithm.linkedlist;
 
 /**
  * Definition for singly-linked list.

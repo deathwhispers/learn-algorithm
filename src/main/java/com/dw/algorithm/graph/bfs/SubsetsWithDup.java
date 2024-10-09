@@ -1,4 +1,4 @@
-package com.guangjian.algorithm.graph.bfs;
+package com.dw.algorithm.graph.bfs;
 
 import java.util.List;
 
