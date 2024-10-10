@@ -1,7 +1,7 @@
 package com.dw.algorithm.daily;
 
 /**
- * The total number of good pairs I
+ * 优质数对的总数 I
  *
  * @author yanggj
  * @version 1.0.0
