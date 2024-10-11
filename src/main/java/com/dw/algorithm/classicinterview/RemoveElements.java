@@ -1,7 +1,7 @@
 package com.dw.algorithm.classicinterview;
 
 /**
- * 移除元素
+ * 移除元素:q!:
  *
  * @author yanggj
  * @version 1.0.0
