@@ -1,5 +1,6 @@
 package com.dw.algorithm.classicinterview;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -45,6 +46,21 @@ public class ContainsNearbyDuplicate {
             if (!set.add(nums[i])) {
                 return true;
             }
+        }
+        return false;
+    }
+
+    /**
+     * 哈希表 key: nums[i], value: i
+     * 遍历数组，判断哈希表中是否存在当前数，若存在，判断 i -j <= k是否满足
+     */
+    public boolean containsNearbyDuplicate3(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i]) && i - map.get(nums[i]) <= k) {
+                return true;
+            }
+            map.put(nums[i], i);
         }
         return false;
     }
