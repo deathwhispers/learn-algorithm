@@ -12,6 +12,7 @@ import java.util.HashMap;
  */
 public class TwoSum {
 
+    // 暴力破解
     public int[] twoSum(int[] nums, int target) {
         int n = nums.length;
         for (int i = 0; i < n; i++) {
@@ -24,6 +25,7 @@ public class TwoSum {
         return null;
     }
 
+    // 通过哈希表，空间换时间
     public int[] twoSum2(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int n = nums.length;
