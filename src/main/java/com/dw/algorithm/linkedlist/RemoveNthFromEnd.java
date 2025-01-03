@@ -1,5 +1,7 @@
 package com.dw.algorithm.linkedlist;
 
+import com.dw.common.ListNode;
+
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -66,7 +68,6 @@ public class RemoveNthFromEnd {
 
     /**
      * <h2>快慢指针</h2>
-     *
      */
     public ListNode removeNthFromEnd3(ListNode head, int n) {
         // 哨兵节点

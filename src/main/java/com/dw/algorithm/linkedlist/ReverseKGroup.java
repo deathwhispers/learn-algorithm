@@ -1,5 +1,7 @@
 package com.dw.algorithm.linkedlist;
 
+import com.dw.common.ListNode;
+
 /**
  * <h1> K 个一组翻转链表</h1>
  * 给你链表的头节点 head ，每 k 个节点一组进行翻转，请你返回修改后的链表。
@@ -18,9 +20,6 @@ public class ReverseKGroup {
 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-
-
-
 
 
         return dummy.next;

@@ -1,5 +1,7 @@
 package com.dw.algorithm.classicinterview;
 
+import com.dw.common.ListNode;
+
 import java.util.HashSet;
 
 /**
@@ -45,15 +47,5 @@ public class HasCycle {
             }
         }
         return false;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
     }
 }

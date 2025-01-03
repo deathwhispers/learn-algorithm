@@ -1,6 +1,7 @@
 package com.dw.algorithm.linkedlist;
 
 import java.util.PriorityQueue;
+import com.dw.common.ListNode;
 
 /**
  * <h1>合并K个升序链表</h1>
