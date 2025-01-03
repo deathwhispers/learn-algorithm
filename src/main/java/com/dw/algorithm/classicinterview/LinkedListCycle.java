@@ -13,7 +13,7 @@ import java.util.HashSet;
  * @date 2025/1/3 9:34
  * @see <a href="https://leetcode.cn/problems/linked-list-cycle/description/?envType=study-plan-v2&envId=top-interview-150">环形链表</a>
  */
-public class HasCycle {
+public class LinkedListCycle {
 
     /**
      * 哈希表

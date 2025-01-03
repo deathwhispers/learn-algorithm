@@ -8,7 +8,7 @@ package com.dw.algorithm.classicinterview;
  * @date 2024/10/24 16:57
  * @see <a href="https://leetcode.cn/problems/valid-palindrome/description/?envType=study-plan-v2&envId=top-interview-150">验证回文串</a>
  */
-public class isPalindrome {
+public class ValidPalindrome {
 
     public boolean isPalindrome(String s) {
         int n = s.length();
