@@ -8,7 +8,7 @@ package com.dw.algorithm.classicinterview;
  * @date 2024/12/17 16:22
  * @see <a href="https://leetcode.cn/problems/valid-anagram/?envType=study-plan-v2&envId=top-interview-150">有效的字母异位词</a>
  */
-public class IsAnagram {
+public class ValidAnagram {
 
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;

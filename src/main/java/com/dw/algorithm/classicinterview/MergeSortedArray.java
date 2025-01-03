@@ -8,7 +8,7 @@ package com.dw.algorithm.classicinterview;
  * @date 2024/10/9 17:53
  * @see <a href="https://leetcode.cn/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150">合并两个有序数组</a>
  */
-public class Merge2SortedArrays {
+public class MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1; // nums1的最后一个有效元素的下标

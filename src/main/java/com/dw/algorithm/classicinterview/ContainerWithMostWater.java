@@ -8,7 +8,7 @@ package com.dw.algorithm.classicinterview;
  * @date 2025/1/2 9:40
  * @see <a href="https://leetcode.cn/problems/container-with-most-water/?envType=study-plan-v2&envId=top-interview-150">盛最多水的容器</a>
  */
-public class MaxArea {
+public class ContainerWithMostWater {
     public int maxArea(int[] height) {
         int length = height.length;
         int maxArea = 0;
