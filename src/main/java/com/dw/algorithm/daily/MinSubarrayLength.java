@@ -31,5 +31,4 @@ public class MinSubarrayLength {
         return res == Integer.MAX_VALUE ? -1 : res;
     }
 
-
 }
