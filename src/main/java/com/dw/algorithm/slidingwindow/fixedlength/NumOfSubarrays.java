@@ -19,11 +19,29 @@ public class NumOfSubarrays {
             if (i - k + 1 < 0) {
                 continue;
             }
-            double avg = (double) sum / k;
-            if (avg >= threshold) {
+            if (sum >= threshold * k) {
                 ans++;
             }
             sum -= arr[i - k + 1];
+        }
+        return ans;
+    }
+
+    public int numOfSubarrays2(int[] arr, int k, int threshold) {
+        int n = arr.length;
+        int ans = 0;
+        int sum = 0;
+        int i = 0;
+        for (; i < k - 1; i++) {
+            sum += arr[i];
+        }
+        while (i < n) {
+            sum += arr[i];
+            if (sum >= threshold * k) {
+                ans++;
+            }
+            sum -= arr[i - k + 1];
+            i++;
         }
         return ans;
     }
