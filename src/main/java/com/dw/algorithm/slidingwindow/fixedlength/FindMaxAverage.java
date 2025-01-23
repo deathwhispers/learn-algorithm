@@ -18,7 +18,7 @@ public class FindMaxAverage {
             // 入：下标为 i 的元素进入窗口，更新统计量
             temp += nums[i];
             // 如果窗口长度不足，则继续
-            if (i - 0 <= k - 1) {
+            if (i <= k - 1) {
                 continue;
             }
             // 更新：更新结果值，最大值/最小值/平均值。。。
