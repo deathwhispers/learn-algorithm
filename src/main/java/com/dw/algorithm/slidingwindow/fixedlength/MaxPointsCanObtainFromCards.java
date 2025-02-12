@@ -40,4 +40,52 @@ public class MaxPointsCanObtainFromCards {
         return ans;
     }
 
+    // 思路 2：取牌范围为 开头的 k 张，以及结尾的 k 张牌
+    // 可以先计算开头 k 张牌的和 sum ，然后从结尾开始滑动
+    // 每次从结尾 n-i 拿一张牌，则从 k-i 处减少一张牌
+    // 即 sum += cardPoints[n-i]
+    //    sum -= cardPoints[k-i]
+    public int maxScore2(int[] cardPoints, int k) {
+        int ans = 0;
+        int n = cardPoints.length;
+        if (k > n) {
+            return ans;
+        }
+        int sum = 0;
+        for (int i = 0; i < k; i++) {
+            sum += cardPoints[i];
+        }
+        ans = sum;
+        for (int i = 0; i < k; i++) {
+            sum += cardPoints[n - 1 - i];
+            sum -= cardPoints[k - 1 - i];
+            ans = Math.max(ans, sum);
+        }
+        return ans;
+    }
+
+    // 思路 3：逆向思维
+    // 总共 n 张牌，所有牌的总和 sum 是固定的
+    // 那么，只需要找出连续的 n-k 张牌的最小和 minSum
+    // 则最大点数为： sum - minSum
+    public int maxScore3(int[] cardPoints, int k) {
+        int n = cardPoints.length;
+        if (k > n) {
+            return 0;
+        }
+        int m = n - k;
+        int sum = 0;
+        for (int i = 0; i < m; i++) {
+            sum += cardPoints[i];
+        }
+        int total = sum;
+        int minSum = sum;
+        for (int i = m; i < n; i++) {
+            total += cardPoints[i];
+            sum += cardPoints[i] - cardPoints[i - m];
+            minSum = Math.min(minSum, sum);
+        }
+        return total - minSum;
+    }
+
 }
