@@ -24,4 +24,20 @@ public class CheckStrHasAllBinCodes {
         }
         return hashSet.size() >= Math.pow(2, k);
     }
+
+    public boolean hasAllCodes2(String s, int k) {
+        StringBuilder builder = new StringBuilder();
+        char[] cs = s.toCharArray();
+        int n = cs.length;
+        HashSet<String> hashSet = new HashSet<>();
+        for (int i = 0; i < n; i++) {
+            builder.append(cs[i]);
+            if (i < k - 1) {
+                continue;
+            }
+            hashSet.add(builder.toString());
+            builder.deleteCharAt(0);
+        }
+        return hashSet.size() >= Math.pow(2, k);
+    }
 }
