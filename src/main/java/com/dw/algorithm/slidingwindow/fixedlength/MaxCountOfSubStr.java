@@ -108,5 +108,4 @@ public class MaxCountOfSubStr {
         }
         return map.values().stream().max(Comparator.comparing(x -> x)).orElse(0);
     }
-
 }
