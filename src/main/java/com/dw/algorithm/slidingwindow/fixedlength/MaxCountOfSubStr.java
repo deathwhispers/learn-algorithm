@@ -22,6 +22,9 @@ public class MaxCountOfSubStr {
         System.out.println(i);
     }
 
+    /**
+     * 暴力解法：遍历每一个子串出现的次数，用 map 存储
+     */
     public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
         char[] arr = s.toCharArray();
         int n = arr.length;
@@ -96,11 +99,11 @@ public class MaxCountOfSubStr {
             // 左侧元素出窗口
             char left = arr[i - minSize + 1];
             subStr.deleteCharAt(0);
-            Integer lcnt = letterMap.get(left);
-            if (lcnt == 1) {
+            Integer count = letterMap.get(left);
+            if (count == 1) {
                 letterMap.remove(left);
             } else {
-                letterMap.put(left, lcnt - 1);
+                letterMap.put(left, count - 1);
             }
         }
         return map.values().stream().max(Comparator.comparing(x -> x)).orElse(0);
