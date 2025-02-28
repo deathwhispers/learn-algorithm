@@ -14,6 +14,13 @@ import java.util.HashMap;
  */
 public class MaxLengthSubstring {
 
+    /**
+     * 1. 使用两个指针 left 和 right 来表示当前窗口的左右边界。
+     * 2. 使用一个哈希表 count 来记录当前窗口中每个字符的出现次数。
+     * 3. 移动 right 指针扩展窗口，并更新哈希表 count。
+     * 4. 如果某个字符的出现次数超过2次，则移动 left 指针收缩窗口，直到所有字符的出现次数都不超过2次。
+     * 5. 在每次调整窗口后，更新最大长度。
+     */
     public int maximumLengthSubstring(String s) {
         int ans = 0;
         // 存储每个字符出现的次数
