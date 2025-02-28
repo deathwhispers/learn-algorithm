@@ -46,4 +46,32 @@ public class MaxLengthSubstring {
         return ans;
     }
 
+    /**
+     * 优化：
+     * 用一个长度26的数组来记录每个字符出现的次数，来代替map
+     * 将数组的下标和字符对应起来
+     */
+    public int maximumLengthSubstring2(String s) {
+        char[] arr = s.toCharArray();
+        int ans = 0;
+        int left = 0;
+        // 存储每个字符出现的次数
+        int[] cnt = new int[26];
+        for (int right = 0; right < arr.length; right++) {
+            // 右侧元素进入窗口
+            char rightChar = s.charAt(right);
+            int rightIdx = arr[right] - 'a';
+            cnt[rightIdx]++;
+            // 更新结果
+            while (cnt[rightIdx] > 2) {
+                int leftIdx = arr[left] - 'a';
+                cnt[leftIdx]--;
+                left++;
+            }
+            ans = Math.max(ans, right - left + 1);
+            // 左侧元素出窗口
+        }
+        return ans;
+    }
+
 }
