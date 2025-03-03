@@ -59,7 +59,6 @@ public class MaxLengthSubstring {
         int[] cnt = new int[26];
         for (int right = 0; right < arr.length; right++) {
             // 右侧元素进入窗口
-            char rightChar = s.charAt(right);
             int rightIdx = arr[right] - 'a';
             cnt[rightIdx]++;
             // 更新结果
