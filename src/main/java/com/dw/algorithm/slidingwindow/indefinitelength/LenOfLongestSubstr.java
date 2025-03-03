@@ -40,4 +40,29 @@ public class LenOfLongestSubstr {
         }
         return ans;
     }
+
+    public int lengthOfLongestSubstring2(String s) {
+        if (s == null || s.isEmpty()) {
+            return 0;
+        }
+        int ans = 0;
+        char[] arr = s.toCharArray();
+        int left = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int right = 0; right < arr.length; right++) {
+            char rightChar = arr[right];
+            map.merge(rightChar, 1, Integer::sum);
+            while (map.get(rightChar) > 1) {
+                char leftChar = arr[left];
+                map.put(leftChar, map.get(leftChar) - 1);
+                if (map.get(leftChar) == 0) {
+                    map.remove(leftChar);
+                }
+                left++;
+            }
+            // 更新答案
+            ans = Math.max(ans, right - left + 1);
+        }
+        return ans;
+    }
 }
