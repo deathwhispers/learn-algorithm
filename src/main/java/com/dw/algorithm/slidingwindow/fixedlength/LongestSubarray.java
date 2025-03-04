@@ -15,11 +15,13 @@ package com.dw.algorithm.slidingwindow.fixedlength;
 public class LongestSubarray {
     public static void main(String[] args) {
         int[] nums = new int[]{0, 1, 1, 1, 0, 1, 1, 0, 1};
-        int i = new LongestSubarray().longestSubarray(nums);
+        int i = new LongestSubarray().longestSubarray2(nums);
         System.out.println(i);
     }
 
     /**
+     * 滑动窗口思路
+     * <p>
      * 删掉一个元素以后全为 1 的最长子数组，其实就是只包含一个 0 的最长子数组
      * 取两个指针 left、right，保证窗口中只有一个 0 ，ans = right - left +1 -1
      */
@@ -43,6 +45,43 @@ public class LongestSubarray {
             }
             // 更新结果
             ans = Math.max(ans, right - left);
+        }
+        return ans;
+    }
+
+    /**
+     * 递推思路
+     * <p>
+     * 1. 求出所有位置 i 的左侧最长子数组pre[i] 和 右侧最长子数组suf[i]（全为 1 的子数组）
+     * 2. 那么，去掉 i 位置的最长子数组则为 pre[i] + suf[i] 中的最大值
+     */
+    public int longestSubarray2(int[] nums) {
+        int ans = 0;
+        int n = nums.length;
+        int[] pre = new int[n];
+        int[] suf = new int[n];
+
+        pre[0] = nums[0];
+        for (int i = 1; i < n; i++) {
+            if (nums[i] == 0) {
+                pre[i] = 0;
+            } else {
+                pre[i] = pre[i - 1] + 1;
+            }
+        }
+
+        suf[n - 1] = nums[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            if (nums[i] == 0) {
+                suf[i] = 0;
+            } else {
+                suf[i] = suf[i + 1] + 1;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            int preSum = i == 0 ? 0 : pre[i - 1];
+            int sufSum = i == n - 1 ? 0 : suf[i + 1];
+            ans = Math.max(ans, preSum + sufSum);
         }
         return ans;
     }
