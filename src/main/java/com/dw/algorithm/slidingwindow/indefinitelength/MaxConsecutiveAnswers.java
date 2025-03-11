@@ -35,33 +35,22 @@ public class MaxConsecutiveAnswers {
     }
 
     public int maxConsecutiveAnswers2(String answerKey, int k) {
-        int tMax = 0 ;
-        int fMax = 0 ;
         char[] arr = answerKey.toCharArray();
-        int tLeft=0;
-        int fLeft=0;
-        int count = 0;
-        int fcount = 0;
+        int tMax = 0, fMax = 0, tLeft = 0, fLeft = 0, tCount = 0, fCount = 0;
         for (int right = 0; right < arr.length; right++) {
             if (arr[right] == 'T') {
-                count++;
-            }else{
-                fcount++;
+                tCount++;
+            } else {
+                fCount++;
             }
-            while (count > k) {
-                if (arr[tLeft++] == 'T') {
-                    count--;
-                }
-            }
-            tMax = Math.max(tMax, right-tLeft+1);
+            while (tCount > k)
+                if (arr[tLeft++] == 'T') tCount--;
+            tMax = Math.max(tMax, right - tLeft + 1);
 
-            while (fcount > k) {
-                if (arr[fLeft++] == 'F') {
-                    fcount--;
-                }
-            }
-            fMax = Math.max(fMax, right-fLeft+1);
+            while (fCount > k)
+                if (arr[fLeft++] == 'F') fCount--;
+            fMax = Math.max(fMax, right - fLeft + 1);
         }
-        return Math.max(tMax,fMax);
+        return Math.max(tMax, fMax);
     }
 }
