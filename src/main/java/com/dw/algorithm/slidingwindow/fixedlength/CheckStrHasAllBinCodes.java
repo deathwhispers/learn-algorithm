@@ -8,7 +8,7 @@ import java.util.HashSet;
  * @author yanggj
  * @version 1.0.0
  * @date 2025/2/14 14:58
- * <a href ="https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/description/>检查一个字符串是否包含所有长度为 K 的二进制子串</a>
+ * <a href ="https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/description"/>检查一个字符串是否包含所有长度为 K 的二进制子串</a>
  */
 public class CheckStrHasAllBinCodes {
     public static void main(String[] args) {
